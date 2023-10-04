@@ -41,7 +41,7 @@ class SignUpActivity : AppCompatActivity() {
 
             }
             else {
-                startActivity(Intent(this@SignUpActivity, SignInActivity::class.java)
+                startActivity(Intent(this@SignUpActivity, UserListActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
             }
 
