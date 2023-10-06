@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <item android:title="Profile"
+        android:id="@+id/nav_profile"/>
+    <item android:title="ChatA">
+        <menu>
+            <item android:title="Mark all as read"
+                android:id="@+id/nav_mark"/>
+            <item android:title="Choose theme"
+                android:id="@+id/nav_theme"/>
+            <item android:title="Starred"
+                android:id="@+id/nav_starred"/>
+            <item android:title="Archived"
+                android:id="@+id/nav_archived"/>
+            <item android:title="Spam and Blocked"
+                android:id="@+id/nav_spam"/>
+            <item android:title="Settings"
+                android:id="@+id/nav_settings"/>
+            <item android:title="Help and Feedback"
+                android:id="@+id/nav_help"/>
+
+        </menu>
+    </item>
+
+    <item android:title="Logout"
+        android:id="@+id/logout"/>
+
+</menu>

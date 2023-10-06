@@ -1,103 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
+    android:id="@+id/drawer_layout"
     tools:context=".activities.UserListActivity">
-    <RelativeLayout
-        android:id="@+id/relativelayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/menu"
-            app:tint="@color/white" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_toStartOf="@+id/userimage"
-            android:layout_marginStart="5dp"
-            android:layout_toEndOf="@+id/menu"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/chat_input_background"
-            app:layout_constraintHorizontal_bias="0.0">
-
-            <ImageView
-                android:id="@+id/searchimg"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:src="@drawable/search"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/search"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/chat_input_background"
-                android:hint="Search messages"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textColor="@color/white"
-                android:textColorHint="@color/secondary"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/searchimg"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/userimage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
-            android:padding="8dp"
-            android:background="@color/white"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile"
-            android:layout_alignParentEnd="true"
-            app:shapeAppearanceOverlay="@style/Circular" />
-    </RelativeLayout>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/chat_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativelayout">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relativelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            tools:listitem="@layout/chat_item_list"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="14dp"
+                android:src="@drawable/menu"
+                app:tint="@color/white" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toStartOf="@+id/userimage"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/menu"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/chat_input_background"
+                app:layout_constraintHorizontal_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/searchimg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/chat_input_background"
+                    android:hint="Search messages"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/secondary"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/searchimg"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:padding="8dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                android:layout_alignParentEnd="true"
+                app:shapeAppearanceOverlay="@style/Circular" />
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/chat_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativelayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                tools:listitem="@layout/chat_item_list"/>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navview"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"/>
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

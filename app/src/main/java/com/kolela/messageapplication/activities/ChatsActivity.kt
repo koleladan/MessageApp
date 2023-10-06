@@ -1,5 +1,6 @@
 package com.kolela.messageapplication.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kolela.messageapplication.R
@@ -16,6 +17,11 @@ class ChatsActivity : AppCompatActivity() {
 
         if (supportActionBar != null) {
             supportActionBar!!.hide()
+        }
+
+        binding.back.setOnClickListener {
+            startActivity(Intent(this@ChatsActivity,UserListActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
     }
 }
